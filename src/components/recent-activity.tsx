@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 export default function RecentActivity() {
   return (
     <div className="flex flex-col bg-[#1a1f36] text-white rounded-lg md:max-h-72 lg:max-h-auto">
-      <div className="p-4 px-6 bg-[#1B214B] rounded-lg">
+      <div className="p-4 px-6 bg-[#1B214B] rounded-t-lg">
         <span className="poppins-regular text-lg tracking-wider">Recent Activity</span>
       </div>
       <div className="p-4 px-6 py-8 bg-[#131943] rounded-lg">
