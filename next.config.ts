@@ -6,7 +6,14 @@ const nextConfig: NextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-  }
+  },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'date-fns': require.resolve('date-fns'),
+    };
+    return config;
+  },
 };
 
 export default nextConfig;
