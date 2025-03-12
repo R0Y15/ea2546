@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WeHR - Modern HR Management Dashboard
+
+WeHR is a modern, responsive HR management dashboard built with Next.js, Tailwind CSS, and TypeScript. It provides a clean and intuitive interface for managing HR-related tasks, employee data, and recruitment processes.
+
+## Features
+
+- 📱 Fully Responsive Design (Mobile, Tablet, Desktop)
+- 🎨 Modern and Clean UI
+- 📊 Interactive Dashboard with Stats
+- 👥 Employee Management
+- 📅 Schedule Management
+- 📢 Announcements System
+- 🔍 Smart Search Functionality
+- 🌓 Collapsible Sidebar
+- 📱 Mobile-First Approach
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) - React Framework
+- [TypeScript](https://www.typescriptlang.org/) - Programming Language
+- [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
+- [Lucide Icons](https://lucide.dev/) - Icon Library
+- [Shadcn UI](https://ui.shadcn.com/) - UI Components
+
+## Screenshots
+
+### Desktop View
+![Desktop View](./public/laptop-mode.png)
+*Full dashboard view on desktop with expanded sidebar*
+
+### Tablet View
+![Tablet View](public/tablet-mode.png)
+*Tablet view with collapsed sidebar showing only icons*
+
+### Mobile View
+![Mobile View](public/mobile-mode.png)
+*Mobile view with hamburger menu and expandable search*
+
+## Key Components
+
+1. **Dashboard Overview**
+   - Quick stats cards
+   - Employee statistics
+   - Talent request metrics
+   - Recent activities
+
+2. **Sidebar Navigation**
+   - Collapsible design
+   - Icon-only view on tablet
+   - Full-width on desktop
+   - Mobile-responsive with overlay
+
+3. **Header**
+   - Smart search functionality
+   - Notification system
+   - User profile quick access
+   - Mobile-optimized layout
+
+4. **Content Sections**
+   - Announcements feed
+   - Upcoming schedules
+   - Priority tasks
+   - Department statistics
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/wehr-dashboard.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+cd wehr-dashboard
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+wehr-dashboard/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── app/           # Next.js app directory
+│   ├── styles/        # Global styles
+│   └── types/         # TypeScript type definitions
+├── public/            # Static assets
+└── package.json       # Project dependencies
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acknowledgments
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Design inspiration from modern HR management systems
+- Icons provided by Lucide Icons
+- UI components from Shadcn UI
