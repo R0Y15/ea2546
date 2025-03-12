@@ -1,10 +1,13 @@
 "use client"
 
 import { CalendarIcon, ChevronDown, MoreHorizontal } from "lucide-react"
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover"
-import { Calendar } from "./ui/calendar"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { Calendar } from "@/components/ui/calendar"
 import { useState } from "react"
 import { format } from "date-fns"
+import { enUS } from "date-fns/locale"
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 
 const upcomingSchedules = [
   {
@@ -40,24 +43,27 @@ export default function UpcomingSchedule() {
   return (
     <div className="bg-white rounded-lg border w-full flex flex-col lg:max-h-[37rem] md:max-h-[22.5rem]">
       <div className="p-4 flex justify-between items-center border-b">
-        <h3 className="text-[#161E54] poppins-medium text-base lg:text-lg">Announcement</h3>
+        <h3 className="text-[#161E54] poppins-medium text-base lg:text-lg">Upcoming Schedule</h3>
         <Popover>
           <PopoverTrigger asChild>
-            <button className="flex items-center gap-1 text-xs sm:text-sm md:text-sm text-gray-500 border rounded-xs px-1.5 sm:px-2 py-0.5 sm:py-1">
-              <span>{date ? format(date, "PP") : "Pick a date"}</span>
-              {date ? (
-                <ChevronDown className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-              ) : (
-                <CalendarIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+            <Button
+              variant={"outline"}
+              className={cn(
+                "w-[180px] justify-start text-left font-normal",
+                !date && "text-muted-foreground"
               )}
-            </button>
+            >
+              <CalendarIcon className="mr-2 h-4 w-4" />
+              {date ? format(date, "PPP", { locale: enUS }) : <span>Pick a date</span>}
+            </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-auto p-0" align="end">
+          <PopoverContent className="w-auto p-0">
             <Calendar
               mode="single"
               selected={date}
               onSelect={setDate}
               initialFocus
+              locale={enUS}
             />
           </PopoverContent>
         </Popover>
