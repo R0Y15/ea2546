@@ -1,6 +1,6 @@
-# WeHR - Modern HR Management Dashboard
+# A Dashboard - Modern HR Management Dashboard
 
-WeHR is a modern, responsive HR management dashboard built with Next.js, Tailwind CSS, and TypeScript. It provides a clean and intuitive interface for managing HR-related tasks, employee data, and recruitment processes.
+Dashboard is a modern, responsive HR management dashboard built with Next.js, Tailwind CSS, and TypeScript. It provides a clean and intuitive interface for managing HR-related tasks, employee data, and recruitment processes.
 
 ## Features
 
