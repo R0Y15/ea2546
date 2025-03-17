@@ -70,22 +70,29 @@ export default function Announcements() {
 
       <div className="flex-1 overflow-y-auto p-4">
         <div className="flex flex-col gap-3">
-          {announcements.map((announcement, index) => (
-            <div key={index} className="bg-[#FAFAFA] rounded-sm p-4 shadow-none border">
-              <div className="flex justify-between items-center">
-                <h4 className="text-[#161E54] mb-1 poppins-regular text-base">{announcement.title}</h4>
-                <div className="flex gap-4 items-center">
-                  <button>
-                    <Star className={`h-5 w-5 text-gray-400 ${announcement.title === 'Outing schedule for every departement' ? 'fill-gray-400' : ''}`} />
-                  </button>
-                  <button>
-                    <MoreHorizontal className="h-5 w-5 text-gray-400" />
-                  </button>
+          {announcements.map((announcement, index) => {
+            const [isStarred, setIsStarred] = useState(announcement.title === 'Outing schedule for every departement');
+            
+            return (
+              <div key={index} className="bg-[#FAFAFA] rounded-sm p-4 shadow-none border">
+                <div className="flex justify-between items-center">
+                  <h4 className="text-[#161E54] mb-1 poppins-regular text-base">{announcement.title}</h4>
+                  <div className="flex gap-4 items-center">
+                    <button 
+                      onClick={() => setIsStarred(!isStarred)}
+                      className="hover:scale-110 transition-transform"
+                    >
+                      <Star className={`h-5 w-5 text-gray-400 ${isStarred ? 'fill-gray-400' : ''}`} />
+                    </button>
+                    <button>
+                      <MoreHorizontal className="h-5 w-5 text-gray-400" />
+                    </button>
+                  </div>
                 </div>
+                <p className="text-gray-500 poppins-regular text-xs">{announcement.date}</p>
               </div>
-              <p className="text-gray-500 poppins-regular text-xs">{announcement.date}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
