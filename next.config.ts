@@ -10,7 +10,12 @@ const nextConfig: NextConfig = {
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      'date-fns': require.resolve('date-fns'),
+    };
+    // Add specific resolution for date-fns modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      'date-fns/locale': require.resolve('date-fns/locale'),
+      'date-fns/locale/en-US': require.resolve('date-fns/locale/en-US'),
     };
     return config;
   },

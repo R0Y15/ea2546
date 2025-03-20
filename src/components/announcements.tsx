@@ -3,7 +3,7 @@
 import { ChevronDown, MoreHorizontal, Pin, Star, CalendarIcon } from "lucide-react"
 import { useState } from "react"
 import { format } from "date-fns"
-import { enUS } from "date-fns/locale/en-US"
+import { enUS } from "date-fns/locale"
 import { Calendar } from "@/components/ui/calendar"
 import {
   Popover,
